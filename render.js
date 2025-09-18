@@ -1,4 +1,3 @@
-// render.js
 import { tasks, saveTasks } from './storage.js'
 
 export function render() {
@@ -14,7 +13,7 @@ export function render() {
     div.dataset.id = task.id
     div.dataset.status = task.status
 
-    // Delete button
+
     const btn = document.createElement("button")
     btn.textContent = "x"
     btn.onclick = () => {
@@ -30,7 +29,7 @@ export function render() {
     document.getElementById(task.status).appendChild(div)
   })
 
-  // ✅ Reorder inside each column by priority
+  
   document.querySelectorAll(".dropzone").forEach(zone => {
     const children = Array.from(zone.children)
     children.sort((a, b) => {

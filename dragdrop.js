@@ -1,4 +1,4 @@
-// dragdrop.js
+
 import { tasks, saveTasks } from './storage.js'
 import { render } from './render.js'
 
@@ -11,7 +11,7 @@ export function initDragDrop() {
       const id = e.dataTransfer.getData("text/plain")
       const task = tasks.find(t => t.id === id)
 
-      if (!task) return // ✅ Fix missing task bug
+      if (!task) return 
       task.status = zone.id
       saveTasks()
       render()

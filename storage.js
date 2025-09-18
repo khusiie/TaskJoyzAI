@@ -3,7 +3,7 @@ export let tasks = JSON.parse(localStorage.getItem("tasks") || "[]")
 
 export function createTask(title, priority = "Medium") {
   return {
-    id: crypto.randomUUID(), // ✅ Fix: unique ID
+    id: crypto.randomUUID(), 
     title,
     status: "todo",
     priority
